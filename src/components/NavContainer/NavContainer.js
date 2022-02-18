@@ -4,10 +4,10 @@ import ScoreCouner from '../ScoreCounter/ScoreCouner'
 
 import './style.scss'
 
-function NavContainer() {
+function NavContainer({createDeck}) {
   return (
     <div className="nav-container">
-        <ButtonsContainer />
+        <ButtonsContainer createDeck={createDeck}/>
         <ScoreCouner />
     </div>
   )

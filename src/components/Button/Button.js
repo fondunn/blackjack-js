@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Button({title, startGame}) {
+function Button({title, createDeck}) {
   return (
-    <button onClick={startGame}>{title}</button>
+    <button onClick={createDeck}>{title}</button>
   )
 }
 

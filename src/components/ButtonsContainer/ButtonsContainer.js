@@ -3,14 +3,11 @@ import Button from '../Button/Button'
 
 import './style.scss'
 
-function startGame() {
-  console.log('start game')
-}
 
-function ButtonsHandler() {
+function ButtonsHandler({createDeck}) {
   return (
     <div className="btn-container">
-        <Button title='Start' startGame={startGame}/>
+        <Button title='Start' createDeck={createDeck}/>
         <Button title='More' />
         <Button title='Stay' />
     </div>
