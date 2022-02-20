@@ -1,8 +1,11 @@
 .players-container {
+    background-color: rgb(12, 79, 48);
+    height: 90%;
+    width: 96%;
+    border-radius: 50%;
+    border-bottom: 20px solid rgb(18, 18, 33);
+
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    background-color: #025939;
-    height: 100%;
-    width: 100%;
 }

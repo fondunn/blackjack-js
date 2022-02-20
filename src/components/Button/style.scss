@@ -1,0 +1,16 @@
+.game-btn {
+    height: 80%;
+    margin: 0 10px;
+    font-size: 22px;
+    width: 120px;
+    border-radius: 15%;
+    cursor: pointer;
+}
+
+.hit {
+    background-color: green;
+}
+
+.stand {
+    background-color: rgb(227, 151, 21);
+}

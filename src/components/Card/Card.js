@@ -1,9 +1,14 @@
 import React from 'react'
+import './style.scss'
 
-function PlayerCard() {
+function Card({ suit, value }) {
   return (
-    <span>*10</span>
+    <div className="card">
+        <div className="card-value">{value} {suit}</div>
+        <div className="card-plate"></div>
+        
+    </div>
   )
 }
 
-export default PlayerCard
+export default Card

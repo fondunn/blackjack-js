@@ -1,4 +1,8 @@
-export const createDeck = (suits, values, deck) => {
+import {values, suits} from '../default/deck'
+
+export let deck = []
+
+export const createDeck = () => {
     for (let i = 0; i < suits.length; i++) {
         for (let j = 0; j < values.length; j++) {
             deck = [
@@ -12,8 +16,17 @@ export const createDeck = (suits, values, deck) => {
         }
     }
 }
+export const shuffleDeck = () => {
+    let randomT = deck.map((item, index) => {
+        return {
+            i: index,
+            value: Math.random()
+        }
+    }).sort((a, b) => a.value - b.value)
+    deck = randomT.map(({ i }) => deck[i])
+}
 
-export const getWeight = (value) => {
+export function getWeight(value) {
     switch (value) {
         case 'J':
         case 'Q':
@@ -26,20 +39,10 @@ export const getWeight = (value) => {
     }
 }
 
-export const shuffleDeck = (deck) => {
-    let randomT = deck.map((item, index) => {
-        return {
-            i: index,
-            value: Math.random()
-        }
-    }).sort((a, b) => a.value - b.value)
-    deck = randomT.map(({ i }) => deck[i])
+export const getCard = () => {
+    return deck.pop()
 }
 
-export const getCard = (deck) => {
-    deck.pop()
-}
-
-export const reset = (deck) => {
+export const resetDeck = () => {
     deck = []
 }

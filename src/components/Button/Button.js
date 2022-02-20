@@ -1,8 +1,9 @@
 import React from 'react'
+import './style.scss'
 
-function Button({title, createDeck}) {
+function Button({title, btnStyle, handlerBtn}) {
   return (
-    <button onClick={createDeck}>{title}</button>
+    <button className={'game-btn ' + btnStyle} onClick={handlerBtn}>{title}</button>
   )
 }
 

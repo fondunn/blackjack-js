@@ -1,0 +1,30 @@
+.card {
+    width: 70px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 7px;
+    position: relative;
+
+
+    & .card-plate {
+        background-color: rgb(87, 87, 87);
+        position: absolute;
+        width: 60%;
+        height: 60%;
+
+        right: 10%;
+        bottom: 5%;
+
+        border-top-left-radius: 50%;
+        border-top-right-radius: 10%;
+        border-bottom-right-radius: 25%;
+        border-bottom-left-radius: 10%;
+    }
+
+    & .card-value {
+        position: absolute;
+        left: 10%;
+        top: 5%;
+    }
+}

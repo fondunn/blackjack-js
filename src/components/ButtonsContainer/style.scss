@@ -1,4 +1,23 @@
 .btn-container {
+    width: 100vw;
+    height: 10vh;
+    background-color: #26316f;
+
+    position: absolute;
+    bottom: 0;
+
     display: flex;
-    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px -5px 18px -5px rgba(0,0,0,0.66);
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    & .btn-control {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
 }

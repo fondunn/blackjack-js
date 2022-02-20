@@ -1,13 +1,20 @@
-import React, {useEffect} from 'react'
-import Player from '../Player/Player'
+import React from 'react'
 import './style.scss'
 
-const players = 4
+import PlayerHand from '../PlayerHand/PlayerHand'
 
-function PlayersContainer() {
+function PlayersContainer({ playersInfo }) {
+  console.log('players from Hand component ',playersInfo);
   return (
     <div className="players-container">
-       <Player />
+        {/* <PlayerHand />
+        <PlayerHand />
+        <PlayerHand />
+        <PlayerHand /> */}
+        {playersInfo.map((player,idx) => 
+          <PlayerHand playerCards={playersInfo[idx].playerHand} playerTotal={playersInfo[idx].playerPoints}/>
+        )}
+
     </div>
   )
 }
